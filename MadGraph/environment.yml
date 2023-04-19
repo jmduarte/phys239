@@ -1,0 +1,9 @@
+name: phys239
+channels:
+    - conda-forge
+dependencies:
+    - python=3.10
+    - pylhe
+    - matplotlib
+    - mplhep
+    - ipykernel
