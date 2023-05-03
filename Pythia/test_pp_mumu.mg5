@@ -1,0 +1,4 @@
+generate p p > mu+ mu-
+output test_pp_mumu
+launch
+   set nevents 100
