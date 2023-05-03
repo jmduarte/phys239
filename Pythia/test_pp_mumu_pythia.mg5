@@ -2,4 +2,4 @@ generate p p > mu+ mu-
 output test_pp_mumu_pythia
 launch
    shower=Pythia8
-   set nevents 100
+   set nevents 1000

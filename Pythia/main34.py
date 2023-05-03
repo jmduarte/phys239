@@ -56,6 +56,7 @@ def run(pythia, nEvent):
 
 # Produce leading-order events with Pythia.
 pythia = pythia8.Pythia()
+pythia.settings.addFlag("Main:writeHepMC", True)
 pythia.readString("Beams:eCM = 13000.")
 pythia.readString("WeakSingleBoson:ffbar2gmZ = on")
 pythia.readString("23:onMode = off")
