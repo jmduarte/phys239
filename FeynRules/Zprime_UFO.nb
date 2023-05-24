@@ -1,0 +1,108 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3886,        100]
+NotebookOptionsPosition[      2946,         79]
+NotebookOutlinePosition[      3383,         96]
+CellTagsIndexPosition[      3340,         93]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"$FeynRulesPath", "=", 
+   RowBox[{
+   "SetDirectory", "[", "\"\<~/Dropbox/phys239/feynrules-current/\>\"", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "FeynRules`"}]}], "Input",
+ CellChangeTimes->{{3.8938891147432823`*^9, 3.8938891157394667`*^9}, 
+   3.893889181632772*^9, 3.893889219816989*^9, {3.8938893123284388`*^9, 
+   3.893889316669065*^9}, {3.89388945820504*^9, 3.893889459324342*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"0c7983f1-6ec8-4722-83cc-5f28019a65fd"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetDirectory", "[", "\"\<~/Dropbox/phys239/FeynRules\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.8938894685856028`*^9, 3.893889477850154*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"000bf6e2-b7e3-46f4-ac00-21d67851dd64"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"LoadModel", "[", 
+   RowBox[{"\"\<SM.fr\>\"", ",", "\"\<Zprime.fr\>\""}], "]"}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.89388920921612*^9, 3.893889217550585*^9}, {
+  3.8938896160510178`*^9, 3.8938896231625347`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"01c79293-bcb3-44cd-af68-afc08ac16f4e"],
+
+Cell[BoxData[
+ RowBox[{"CheckHermiticity", "[", 
+  RowBox[{"LSM", "+", "LZprime"}], "]"}]], "Input",
+ CellChangeTimes->{{3.893889490841796*^9, 3.893889497078225*^9}, {
+  3.8938897083027287`*^9, 3.893889719182805*^9}, {3.893889869910029*^9, 
+  3.893889870448566*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"01a227c1-ee5f-4303-8444-44faf48b2336"],
+
+Cell[BoxData[
+ RowBox[{"CheckMassSpectrum", "[", 
+  RowBox[{"LSM", "+", "LZprime"}], "]"}]], "Input",
+ CellChangeTimes->{3.893889729421763*^9, 3.893889781929799*^9},
+ NumberMarks->False,
+ CellLabel->"In[8]:=",ExpressionUUID->"06e897ec-7ca4-4fc8-b3be-8e76602fbc98"],
+
+Cell[BoxData[{
+ RowBox[{"FeynmanRules", "[", 
+  RowBox[{"LZprime", ",", 
+   RowBox[{"FlavorExpand", "->", "True"}]}], "]"}], "\n", 
+ RowBox[{"FeynmanRules", "[", 
+  RowBox[{"LSM", ",", 
+   RowBox[{"FlavorExpand", "->", "True"}]}], "]"}], "\n"}], "Input",
+ CellChangeTimes->{{3.8938903828980713`*^9, 3.89389038290272*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"b28cbf99-ab33-43cf-952e-fe6e909cc451"],
+
+Cell[BoxData[
+ RowBox[{"WriteUFO", "[", 
+  RowBox[{"LSM", "+", "LZprime"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8938904154986677`*^9, 3.8938904155031233`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"982f73b4-4e92-4d54-bed1-1dce7f8bd770"]
+},
+WindowSize->{1440, 773},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+FrontEndVersion->"13.2 for Mac OS X x86 (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6ffc1b4b-9021-4471-a396-bc12e8f9ac8f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 522, 10, 52, "Input",ExpressionUUID->"0c7983f1-6ec8-4722-83cc-5f28019a65fd"],
+Cell[1083, 32, 266, 5, 30, "Input",ExpressionUUID->"000bf6e2-b7e3-46f4-ac00-21d67851dd64"],
+Cell[1352, 39, 330, 7, 30, "Input",ExpressionUUID->"01c79293-bcb3-44cd-af68-afc08ac16f4e"],
+Cell[1685, 48, 344, 6, 30, "Input",ExpressionUUID->"01a227c1-ee5f-4303-8444-44faf48b2336"],
+Cell[2032, 56, 264, 5, 30, "Input",ExpressionUUID->"06e897ec-7ca4-4fc8-b3be-8e76602fbc98"],
+Cell[2299, 63, 399, 8, 73, "Input",ExpressionUUID->"b28cbf99-ab33-43cf-952e-fe6e909cc451"],
+Cell[2701, 73, 241, 4, 30, "Input",ExpressionUUID->"982f73b4-4e92-4d54-bed1-1dce7f8bd770"]
+}
+]
+*)
+

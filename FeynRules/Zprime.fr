@@ -1,0 +1,51 @@
+M$ModelName = "Zprime";
+
+M$Information = {
+    Authors -> {"J. Duarte"},
+    Version -> "0.0",
+    Date -> "2023-05-23",
+    Institutions -> {"UCSD"},
+    Emails -> {"jduarte@ucsd.edu"}
+};
+
+M$ClassesDescription = {
+  V[6] == { 
+    ClassName       -> Zprime, 
+    SelfConjugate   -> True,
+    Mass            -> {MZpr, 1000.0},
+    Width           -> {WZpr, 1.0},
+    ParticleName    -> "Zprime", 
+    PDG             -> 6000055, 
+    PropagatorLabel -> "Zprime",
+    PropagatorType  -> Sine,
+    PropagatorArrow -> None,
+    FullName        -> "Zprime"
+  }
+};
+
+M$Parameters = {
+  ct == { 
+    ParameterType    -> External,
+    ParameterName    -> ct,
+    BlockName        -> ZPRIME, 
+    Value            -> 1.0,
+    InteractionOrder -> {NP, 1},  
+    TeX              -> Subscript[c,t], 
+    Description      -> "Z'-top coupling"
+  },
+  cu == { 
+    ParameterType    -> External,
+    ParameterName    -> cu,
+    BlockName        -> ZPRIME, 
+    Value            -> 1.0,
+    InteractionOrder -> {NP, 1},  
+    TeX              -> Subscript[c,u], 
+    Description      -> "Z'-up coupling"
+  }
+};
+
+LZprime := - 1/4 (del[Zprime[nu], mu] - del[Zprime[mu], nu])^2 + (MZpr^2 / 2) Zprime[mu]Zprime[mu] + cu uRbar.Ga[mu].uR Zprime[mu] + ct tRbar.Ga[mu].tR Zprime[mu];
+
+M$InteractionOrderHierarchy = { {QCD, 1}, {QED, 2}, {NP, 1} };
+
+M$InteractionOrderLimit = { { { NP,2 } } };
